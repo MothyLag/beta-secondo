@@ -1,0 +1,106 @@
+.bottom-nav-above
+{
+    display: none;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .section-side-bar
+    {
+        display: none;
+    }
+
+    .bottom-nav-above
+    {
+        height: 6.9rem;
+        width: 100%;
+        position: fixed;
+        z-index: 1500;
+        background: rgba(245, 245, 245, 0.75);
+        border-top: 1px solid #CCC;
+        backdrop-filter: blur(2.5rem) opacity(100%);
+        -webkit-backdrop-filter: blur(2.5rem) opacity(100%);
+        -moz-backdrop-filter: blur(2.5rem) opacity(100%);
+        -o-backdrop-filter: blur(2.5rem) opacity(100%);
+        -ms-backdrop-filter: blur(2.5rem) opacity(100%);
+        bottom: 0;
+        display: block;
+    }
+
+    .bottom-list
+    {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0 -1rem;
+        padding-top: .2rem;
+        justify-content: space-between;
+    }
+
+    .bottom-item
+    {
+        display: grid;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .bottom-link
+    {
+        font-size: 1.5rem;
+        color: #999999;
+        padding: 0 1rem;
+        transition: .5s;
+        margin-top: 1rem;
+    }
+    .current-bottom-link
+    {
+        color: #007AFF;
+    }
+
+    .create-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/add.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .credits-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/credits.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .credits-icon-bottom-nav-blue
+    {
+        background: url('../images/fast-icons/credits-blue.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .explore-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/explore.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .search-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/search.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .bottom-icon
+    {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

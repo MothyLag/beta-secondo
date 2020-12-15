@@ -1,0 +1,210 @@
+.container-list-notfi
+{
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 0 .5rem;
+}
+
+.global-notfi-display
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.cta-notfi-container
+{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.notfi-square
+{
+    z-index: 1300;
+    background: rgba(223, 223, 223, 0.75);
+    backdrop-filter: blur(2.5rem) opacity(100%);
+    -webkit-backdrop-filter: blur(2.5rem) opacity(100%);
+    -moz-backdrop-filter: blur(2.5rem) opacity(100%);
+    -o-backdrop-filter: blur(2.5rem) opacity(100%);
+    -ms-backdrop-filter: blur(2.5rem) opacity(100%);
+    width: 295px;
+    height: 60px;
+    padding: 1rem 1rem;
+    border-radius: 15px;
+    margin-right: 2rem;
+    transition: 0.6s;
+    margin-bottom: 2.5rem;
+    display: flex;
+}
+
+.notfi-square:hover
+{
+    background: rgba(224, 224, 224, 0.75);
+}
+
+.line-notfi
+{
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.notification-icon-notfi
+{
+    background: url('../images/notificatino-icon.svg') center no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.title-notfi
+{
+    text-align: center;
+    padding-top: .5rem;
+    color: #333;
+    padding-bottom: 1rem;
+}
+
+.title-heading-notfi
+{
+    font-size: 18px;
+    font-weight: lighter;
+    color: #A5A5A5;
+}
+
+.title-sub-heading-notfi
+{
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: .4rem;
+}
+
+.title-content-notfi
+{
+    display: flex;
+    padding-top: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-right: 4rem;
+    padding-left: 1rem;
+}
+
+.circle-notfi
+{
+    width: 13px;
+    height: 13px;
+    background: #36ff68;
+    border-radius: 50px;
+    margin-top: .2rem;
+}
+
+.flex-title
+{
+    display: flex;
+}
+
+.title-notfi-descrip
+{
+    color: #333;
+    font-size: 15px;
+    margin-left: 1rem;
+    font-weight: lighter;
+}
+
+.notfi-report
+{
+    z-index: 1400;
+    height: 0;
+    overflow-y: hidden;
+    position: fixed;
+    transition: 0.6s;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2.5rem;
+}
+
+.title-report-head
+{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(224, 224, 224, 0.75);
+    backdrop-filter: blur(2.9rem) opacity(100%);
+    -webkit-backdrop-filter: blur(2.9rem) opacity(100%);
+    -moz-backdrop-filter: blur(2.9rem) opacity(100%);
+    -o-backdrop-filter: blur(2.9rem) opacity(100%);
+    -ms-backdrop-filter: blur(2.9rem) opacity(100%);
+    width: 295px;
+    height: 20px;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1rem 1.5rem;
+}
+
+.cta-close-link-report
+{
+    width: 20px;
+    height: 20px;
+    background: url('../images/close-icon.svg') center no-repeat;
+    display: inline-block;
+}
+
+.cta-close-con
+{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cta-close-con:hover
+{
+    opacity: 0.5;
+}
+
+.notfi-body-report
+{
+    background: rgba(224, 224, 224, 0.75);
+    backdrop-filter: blur(2.9rem) opacity(100%);
+    -webkit-backdrop-filter: blur(2.9rem) opacity(100%);
+    -moz-backdrop-filter: blur(2.9rem) opacity(100%);
+    -o-backdrop-filter: blur(2.9rem) opacity(100%);
+    -ms-backdrop-filter: blur(2.9rem) opacity(100%);
+    width: 295px;
+    padding: 1rem 1.5rem;
+    height: 350px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: scroll;
+}
+
+.notfi-list
+{
+    padding-bottom: 2rem;
+}
+
+.notfi-item
+{
+    background: rgba(255, 255, 255, 0.45);
+    color: #333;
+    width: auto;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.text-con-notfi
+{
+    padding: 1rem 1rem;
+}
+
+.notfi-user
+{
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.notfi-reference
+{
+    color: rgb(100, 100, 100);
+    font-weight: lighter;
+    font-size: 16px;
+    padding-top: .6rem;
+}

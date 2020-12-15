@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-size: 10px;
+    font-family: 'SFPro-Regular';
+}
+
+a
+{
+
+    text-decoration: none;
+}
+
+body
+{
+    background: #F5F5F5;
+}
+
+.container-margin
+{
+    margin-left: 270px;
+}
+
+.title
+{
+    color: #111111;
+    padding-top: 2rem;
+}
+
+.title-sub-heading
+{
+    font-size: 18px;
+    
+}
+
+.content-config
+{
+    margin-left: 270px;
+}
+
+.section-cog
+{
+    margin-top: 6rem;
+}
+
+.cog-link
+{
+    font-size: 15.5px;
+    color: #777;
+}
+
+.hero-larger
+{
+    height: 69.2rem;
+    background-size: auto 73.6rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

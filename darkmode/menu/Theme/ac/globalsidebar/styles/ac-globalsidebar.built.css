@@ -1,0 +1,255 @@
+.section-side-bar
+{
+    left: 0;
+    height: 100vh;
+    width: 25rem;
+    position: fixed;
+    z-index: 1700;
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(3rem) opacity(100%);
+    -webkit-backdrop-filter: blur(3rem) opacity(100%);
+    -moz-backdrop-filter: blur(3rem) opacity(100%);
+    -o-backdrop-filter: blur(3rem) opacity(100%);
+    -ms-backdrop-filter: blur(3rem) opacity(100%);
+    top: 0;
+}
+
+.side-list
+{
+    list-style: none;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+
+.side-item
+{
+    margin-bottom: 2rem;
+}
+
+.current-item
+{
+    background: #C5C5C5;
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+    z-index: -1;
+    margin-top: -.5rem;
+    width: 200px;
+    margin-left: -1rem;
+}
+
+.side-absolute
+{
+    position: relative;
+    margin-top: -3rem;
+}
+
+.side-item-search
+{
+    margin-bottom: 4rem;
+    margin-top: 10rem;
+}
+
+.side-link
+{
+    color: #999999;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 1rem;
+    position: absolute;
+    margin-top: .2rem;
+}
+
+.create-link
+{
+    cursor: pointer;
+}
+
+.credit-side
+{
+    margin-top: -2rem;
+    margin-left: -.8rem
+}
+
+.credit-icon
+{
+    background: url('../images/credit!/image-bold-gray.svg') no-repeat center;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.search-box
+{
+    margin-top: -2rem;
+}
+
+.search-input
+{
+    width: 200px;
+    height: 33px;
+    padding-left: 35px;
+    background: rgba(2, 2, 2, 0.3);
+    border-radius: 5px;
+    border: 1px solid #333333;
+    color: #999999;
+    font-weight: bold;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.icon-search
+{
+    background: url('../images/search/search.svg') no-repeat center;
+    width: 14.2px;
+    height: 14.2px;
+    left: 35px;
+    position: absolute;
+    z-index: 900;
+    float: left;
+    margin-top: .75rem;
+}
+
+.search-input:focus
+{
+    border: 2px solid #007AFF;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,115,255,0.67);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,115,255,0.67);
+    box-shadow: 0px 0px 7px 0px rgba(0,115,255,0.67);
+}
+
+::placeholder 
+{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #A0A0A0;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder 
+{ /* Internet Explorer 10-11 */
+    color: #A0A0A0;
+}
+  
+::-ms-input-placeholder 
+{ /* Microsoft Edge */
+    color: #A0A0A0;
+    margin-left: 1rem;
+}
+
+.home-icon
+{
+    background: url('../images/fast-icons/home.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.create-icon
+{
+    background: url('../images/fast-icons/add.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.credits-icon
+{
+    background: url('../images/fast-icons/credits.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.created-icon
+{
+    background: url('../images/fast-icons/created.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.calc-icon
+{
+    background: url('../images/fast-icons/calc.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.uchat-icon
+{
+    background: url('../images/fast-icons/chat.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.configuration-icon
+{
+    background: url('../images/fast-icons/cog.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.logout-icon
+{
+    background: url('../images/fast-icons/power.svg') no-repeat center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.profile-item
+{
+    display: grid;
+    margin-top: 220px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.profile-image
+{
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.circle-avatar
+{
+    border: 1px solid #999999;
+    border-radius: 90px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+.avatar-img
+{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 90px;
+}
+
+.menu-link
+{
+    color: #999999;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 1rem;
+}

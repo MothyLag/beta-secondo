@@ -1,0 +1,94 @@
+.bottom-nav-above
+{
+    display: none;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .section-side-bar
+    {
+        display: none;
+    }
+
+    .bottom-nav-above
+    {
+        height: 6.5rem;
+        width: 100%;
+        position: fixed;
+        z-index: 1500;
+        background: rgba(20, 20, 20, 0.75);
+        border-top: 1px solid #333333;
+        backdrop-filter: blur(1.5rem) opacity(100%);
+        -webkit-backdrop-filter: blur(1.5rem) opacity(100%);
+        -moz-backdrop-filter: blur(1.5rem) opacity(100%);
+        -o-backdrop-filter: blur(1.5rem) opacity(100%);
+        -ms-backdrop-filter: blur(1.5rem) opacity(100%);
+        bottom: 0;
+        display: block;
+    }
+
+    .bottom-list
+    {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0 -1rem;
+        padding-top: .2rem;
+        justify-content: space-between;
+    }
+
+    .bottom-item
+    {
+        display: grid;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .bottom-link
+    {
+        font-size: 1.5rem;
+        color: #999999;
+        padding: 0 1rem;
+        transition: .5s;
+        margin-top: 1rem;
+    }
+
+    .create-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/add.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .credits-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/credits.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .calc-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/calc.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .uchat-icon-bottom-nav
+    {
+        background: url('../images/fast-icons/chat.svg') no-repeat center;
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .bottom-icon
+    {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

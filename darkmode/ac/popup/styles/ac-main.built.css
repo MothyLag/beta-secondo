@@ -1,0 +1,122 @@
+.overlay-fiscal
+{
+	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 1800;
+	transition: 0.5s;
+	backdrop-filter: blur(2.5rem) opacity(100%);
+	-webkit-backdrop-filter: blur(2.5rem) opacity(100%);
+	-moz-backdrop-filter: blur(2.5rem) opacity(100%);
+	-o-backdrop-filter: blur(2.5rem) opacity(100%);
+    -ms-backdrop-filter: blur(2.5rem) opacity(100%);
+    background: rgba(20, 20, 20, 0.7);
+    height: 100vh;
+    overflow: auto;
+    
+}
+
+.overlay-fiscal.active 
+{
+	visibility: visible;
+}
+
+.emergent-fiscal
+{
+	padding: 20px;
+	text-align: center;
+    min-width: 400px;
+	height: 100vh;
+	transform: scale(0.7);
+    position: absolute;
+    
+}
+
+.close-cta-fiscal
+{
+	background: url('../images/icons/cancel/close-icon.svg') no-repeat center;
+	display: inline-block;
+	line-height: 16px;
+	text-align: right;
+    right: 0;
+    position: absolute;
+	transition: .0s ease all;
+	width: 18px;
+    height: 18px;
+    margin-right: 5rem;
+    margin-top: -25rem;
+    transition: 0.5s;
+}
+
+.close-cta-fiscal:hover
+{
+    opacity: 0.6;
+}
+
+.section-fiscal-label
+{
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+}
+
+.title-fiscal
+{
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.fiscal-item
+{
+    margin-top: 3rem;
+}
+
+.input-fiscal-label
+{
+    width: 450px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    background: transparent;
+    padding: 1rem 1rem;
+    font-size: 22px;
+    color: #F1F1F1;
+}
+
+.input-fiscal-label:focus
+{
+    border: 2px solid #007AFF;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+    box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+}
+
+.cta-button-blue-fiscal
+{
+	background: rgb(0,155,255);
+    background: -moz-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009bff",endColorstr="#0156cb",GradientType=1);
+    width: 250px;
+    height: 50px;
+    color: #F1F1F1;
+    border-radius: 60px;
+    border: none;
+    font-size: 23px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+}
+
+.cta-button-blue-fiscal:hover
+{
+	opacity: 0.5;
+}
+

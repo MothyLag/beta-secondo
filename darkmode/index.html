@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <title>Inicio - Credit!</title>
+
+        <meta property="og:url" content="https://www.icreditcom.com/Inicio/" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:site_name" content="CREDIT" />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" type="text/css" href="ac/swipes/styles/swiper.min.css" />   
+        <link rel="stylesheet" type="text/css" href="ac/swipes/styles/swipe.css">    
+        <link rel="stylesheet" type="text/css" href="v/home/styles/main.built.css">
+        <link rel="stylesheet" type="text/css" href="ac/globalnav/styles/ac-globalnav.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/scrollbar/styles/ac-globalscrollbar.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/globalsidebar/styles/ac-globalsidebar.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/globalbottomnav/styles/bottomnav.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/popup/styles/ac-main.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/spinner/styles/ac-globalspinner.built.css" />
+        <link rel="stylesheet" type="text/css" href="ws/ac-globalfonts.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="ac/favicon/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="ac/favicon/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="ac/favicon/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#000000">
+        
+
+  </head>
+    <body class="hide-spinner" id="body-background">
+
+
+
+
+        <header class="header-box" data-analytics="navigation-header" role="navigation">
+            <nav class="nav">
+                <ul class="nav-list nav-list-mobile">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            Crear crédito
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <div class="profile-menu-nav">
+                                <span class="ac-profile-image-nav ac-circle-avatar-nav">
+                                    <img src="../ac/avatars/images/image.png" alt="" class="ac-avatar-img-nav circle-img">
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="nav-item nav-item-hidden">
+                        <a href="" class="nav-link">
+                            Crear crédito
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-hidden">
+                        <a href="" class="nav-link">
+                            <div class="profile-menu-nav">
+                                <span class="ac-profile-image-nav ac-circle-avatar-nav">
+                                    <img src="" alt="" class="ac-avatar-img-nav circle-img">
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector(".header-box");
+                header.classList.toggle("header-visibility", window.scrollY > 0)
+            })
+        </script>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+        <div class="section-side-bar grey-side-bar">
+            <div class="container">
+                <ul class="side-list side-list-larger">
+                    <li class="credit-side">
+                        <a href="" class="side-link credit"><figure class="credit-icon"></figure></a>
+                    </li>
+                    <li class="side-item side-item-search">
+                        <form onSubmit="return handleSearch()">
+                            <div class="search-box search-box-larger">
+                                <span class="icon-search"></span>
+                                <input type="text" class="search-input" placeholder="Buscar">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon create-icon"></figure><a class="side-link create-link" id="fiscal-pop">Crear</a>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon credits-icon"></figure><a href="" class="side-link adquired">Créditos</a>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon calc-icon"></figure><a href="" class="side-link calc">Calculadora</a>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon uchat-icon"></figure><a href="" class="side-link uchat">Chat</a>
+                    </li>
+                    <li class="profile-item grid-item-profile">
+                        <a href="menu/" class="link-menu-non">
+                            <span class="profile-image circle-avatar">
+                                <img src="ac/avatars/images/image.png" alt="" class="avatar-img circle-img">
+                            </span>
+                            <a href="menu/" class="menu-link">Alfonso Pérez Montalvo</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="bottom-nav-above">
+            <div class="container">
+                <ul class="bottom-list bottom-list-mobile">
+                    <li class="bottom-item">
+                        <figure class="bottom-icon create-icon-bottom-nav"></figure>
+                        <a id="fiscal-pop" class="bottom-link create">Crear</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon credits-icon-bottom-nav"></figure>
+                        <a href="" class="bottom-link adquired">Créditos</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon calc-icon-bottom-nav"></figure>
+                        <a href="" class="bottom-link calc">Calculadora</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon uchat-icon-bottom-nav"></figure>
+                        <a href="" class="bottom-link uchat">Chat</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <section class="hero-swipes wrapper-swiper">
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="ac-title-card">
+                                
+                                <div class="ac-sun-spec">
+                                    <figure class="sun-icon"></figure>
+                                </div>
+                                <h2 class="ac-amount-title">$40,000 MXN</h2>
+                            </div>
+                            <div class="ac-title-specs">
+                                <h3 class="ac-title-sub-heading">Interes: 1%</h3>
+                                <h3 class="ac-title-sub-heading">Plazo a pagar: 128 semanas</h3>
+                                <h3 class="ac-title-sub-heading">Inicio de pago: 4 semanas</h3>
+                            </div>
+                            <div class="ac-person-spec">
+                                <h2 class="ac-person-name">Alberto Guzman Torres</h2>
+                            </div>
+                            <div class="ac-cta">
+                                <a class="cta-link-card" id="watch-credit">Ver más</a>
+                            </div>
+                        </div>
+
+
+
+                        <div class="swiper-slide">
+                        <div class="ac-title-card">
+                            
+                            <div class="ac-sun-spec">
+                                <figure class="sun-icon"></figure>
+                            </div>
+                            <h2 class="ac-amount-title">$10,600 MXN</h2>
+                        </div>
+                            <div class="ac-title-specs">
+                                <h3 class="ac-title-sub-heading">Interes: 0.5%</h3>
+                                <h3 class="ac-title-sub-heading">Plazo a pagar: 76 semanas</h3>
+                                <h3 class="ac-title-sub-heading">Inicio de pago: 3 semanas</h3>
+                            </div>
+                            <div class="ac-person-spec">
+                                <h2 class="ac-person-name">Tomas Ruiz Castillo</h2>
+                            </div>
+                            <div class="ac-cta">
+                                <a class="cta-link-card" id="watch-credit">Ver más</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                        <div class="ac-title-card">
+                            
+                        <div class="ac-sun-spec">
+                            <figure class="sun-icon"></figure>
+                        </div>
+                        <h2 class="ac-amount-title">$30,880 MXN</h2>
+                        </div>
+                        <div class="ac-title-specs">
+                            <h3 class="ac-title-sub-heading">Interes: 1.5%</h3>
+                            <h3 class="ac-title-sub-heading">Plazo a pagar: 128 semanas</h3>
+                            <h3 class="ac-title-sub-heading">Inicio de pago: 4 semanas</h3>
+                        </div>
+                        <div class="ac-person-spec">
+                            <h2 class="ac-person-name">Angelica Ramirez García</h2>
+                        </div>
+                        <div class="ac-cta">
+                            <a class="cta-link-card" id="watch-credit">Ver más</a>
+                        </div>
+                        </div>
+                        <div class="swiper-slide">
+                        <div class="ac-title-card">
+                            
+                            <div class="ac-sun-spec">
+                                <figure class="sun-icon"></figure>
+                            </div>
+                            <h2 class="ac-amount-title">$4,600 MXN</h2>
+                        </div>
+                        <div class="ac-title-specs">
+                            <h3 class="ac-title-sub-heading">Interes: 2%</h3>
+                            <h3 class="ac-title-sub-heading">Plazo a pagar: 64 semanas</h3>
+                            <h3 class="ac-title-sub-heading">Inicio de pago: 2 semanas</h3>
+                        </div>
+                        <div class="ac-person-spec">
+                            <h2 class="ac-person-name">Fabiola Expósito López </h2>
+                        </div>
+                        <div class="ac-cta">
+                            <a class="cta-link-card" id="watch-credit">Ver más</a>
+                        </div>
+                        </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        <script src="ac/swipes/scripts/swiper.min.js"></script><script>
+            var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : false,
+            },
+            pagination: {el: '.swiper-pagination',},
+        });
+        </script>
+
+        <div class="overlay" id="overlay">
+            <div class="emergent-credit" id="popup">
+                <a href="#" id="close-credit" class="close-cta"></a>
+                <div class="section-info-credit">
+                    <div class="ac-title-card">   
+                        <div class="ac-sun-spec">
+                            <figure class="sun-icon"></figure>
+                        </div>
+                        <h2 class="amount-title-overlay">$40,000 MXN</h2>
+                    </div>
+                    <div class="title-info-overlay">
+                        <h3 class="title-sub-heading-overlay">Interes: 1%</h3>
+                        <h3 class="title-sub-heading-overlay">Plazo a pagar: 128 semanas</h3>
+                        <h3 class="title-sub-heading-overlay">Inicio de pago: 4 semanas</h3>
+                    </div>
+                    <div class="emiter-name-overlay">
+                        <h2 class="person-name-overlay">Alberto Guzman Torres</h2>
+                    </div>
+                    <div class="cta-overlay">
+                        <button class="cta-button-blue" type="submit">Adquirir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="v/home/scripts/popup.js"></script>
+
+        <div class="overlay-fiscal" id="overlay-fiscal">
+            <a href="#" id="close-fiscal" class="close-cta-fiscal"></a>
+            <div class="emergent-fiscal" id="popup-fiscal">
+                <div class="container">
+                    <div class="section-fiscal-label">
+                        <div class="title-fiscal">
+                            <h2 class="title-sub-heading">Antes de crear créditos debes registrar tus datos fiscales</h2>
+                        </div>
+                        <ul class="fiscal-list">
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="text" name="" id="" placeholder="Ingrese su RFC">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="text" name="" id="" placeholder="Ingrese su CURP">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="text" name="" id="" placeholder="Ingrese su domicilio fiscal">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="number" name="" id="" placeholder="Ingrese su código postal">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="text" name="" id="" placeholder="Ingrese su razón social o nombre(s) y apellidos">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="email" name="" id="" placeholder="Ingrese su correo electrónico para facturas">
+                            </li>
+                            <li class="fiscal-item">
+                                <input class="input-fiscal-label" type="number" name="" id="" placeholder="Ingrese su número celular">
+                            </li>
+                        </ul>
+                        <div class="cta-overlay">
+                            <a href="Create/"></a><button class="cta-button-blue-fiscal" type="submit">Siguiente</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="v/home/scripts/popup-fiscal.js"></script>
+
+
+    </body>
+</html>    

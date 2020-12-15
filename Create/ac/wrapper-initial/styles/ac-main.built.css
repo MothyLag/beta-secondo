@@ -1,0 +1,238 @@
+.square-blur-info
+{
+    margin-top: 12rem;
+    position: absolute;
+}
+
+.blur-section-info
+{
+    
+    backdrop-filter: blur(2.5rem) opacity(100%);
+    -webkit-backdrop-filter: blur(2.5rem) opacity(100%);
+    -moz-backdrop-filter: blur(2.5rem) opacity(100%);
+    -o-backdrop-filter: blur(2.5rem) opacity(100%);
+    -ms-backdrop-filter: blur(2.5rem) opacity(100%);
+    width: 260px;
+    height: 130px;
+    border-radius: 10px;
+	margin-left: 3rem;
+}
+
+.blur-white
+{
+    background: rgba(245, 245, 245, 0.2);
+}
+
+.blur-black
+{
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.wrapper-initial-section
+{
+	background: url('../images/wrapper-initial.png') no-repeat center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.hero-initial
+{
+	height: 32.5rem;
+	background-size: auto 73.6rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width: 768px)
+{
+    .container-blur
+	{
+		max-width: 144rem;
+		margin: 0 auto;
+		padding: 0 2.2rem;
+	}
+	
+	.title-blur
+	{
+		margin-top: .2rem;
+	}
+    
+    .wrapper-initial-section
+	{
+		margin-top: -7rem;
+		border-radius: 5px;
+	}
+
+	.square-blur-info
+	{
+		position: relative;
+	}
+
+	.blur-section-info
+	{
+		
+		backdrop-filter: blur(1.5rem) opacity(100%);
+		-webkit-backdrop-filter: blur(1.5rem) opacity(100%);
+		-moz-backdrop-filter: blur(1.5rem) opacity(100%);
+		-o-backdrop-filter: blur(1.5rem) opacity(100%);
+		-ms-backdrop-filter: blur(1.5rem) opacity(100%);
+		width: 400px;
+		height: 130px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: 24rem;
+	}
+}
+
+@media screen and (max-width: 418px)
+{
+    .container-blur
+	{
+		max-width: 144rem;
+		margin: 0 auto;
+		padding: 0 0rem;
+	}
+	
+	.title-blur
+	{
+		margin-top: .2rem;
+	}
+    
+    .wrapper-initial-section
+	{
+		margin-top: -5rem;
+		border-radius: 5px;
+	}
+
+	.square-blur-info
+	{
+		position: relative;
+	}
+
+	.blur-section-info
+	{
+		backdrop-filter: blur(1.5rem) opacity(100%);
+		-webkit-backdrop-filter: blur(1.5rem) opacity(100%);
+		-moz-backdrop-filter: blur(1.5rem) opacity(100%);
+		-o-backdrop-filter: blur(1.5rem) opacity(100%);
+		-ms-backdrop-filter: blur(1.5rem) opacity(100%);
+		width: 320px;
+		height: 130px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: 24rem;
+	}
+}
+
+
+@media screen and (max-width: 378px)
+{
+    .container-blur
+	{
+		max-width: 101rem;
+		margin: 0 auto;
+		padding: 0 2.2rem;
+	}
+	
+	.title-blur
+	{
+		margin-top: .2rem;
+	}
+    
+    .wrapper-initial-section
+	{
+		margin-top: -5rem;
+		border-radius: 5px;
+	}
+
+	.square-blur-info
+	{
+		position: relative;
+	}
+
+	.blur-section-info
+	{	
+		backdrop-filter: blur(1.5rem) opacity(100%);
+		-webkit-backdrop-filter: blur(1.5rem) opacity(100%);
+		-moz-backdrop-filter: blur(1.5rem) opacity(100%);
+		-o-backdrop-filter: blur(1.5rem) opacity(100%);
+		-ms-backdrop-filter: blur(1.5rem) opacity(100%);
+		width: 300px;
+		height: 130px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0;
+		position: absolute;
+		margin-top: 24rem;
+		top: 10%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+
+@media screen and (max-width: 340px)
+{
+	/* WRAPPER INITIAL STARTS*/
+	.title-blur
+	{
+		margin-top: .2rem;
+	}
+
+	.blur-section-info
+	{
+		backdrop-filter: blur(1.5rem) opacity(100%);
+		-webkit-backdrop-filter: blur(1.5rem) opacity(100%);
+		-moz-backdrop-filter: blur(1.5rem) opacity(100%);
+		-o-backdrop-filter: blur(1.5rem) opacity(100%);
+		-ms-backdrop-filter: blur(1.5rem) opacity(100%);
+		width: 250px;
+		height: 130px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		margin-top: 24rem;
+	} 
+
+	/* WRAPPER INITIAL ENDS*/
+}

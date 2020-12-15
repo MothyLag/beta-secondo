@@ -1,0 +1,14 @@
+$bodydark: #1F1F1F;
+$sidebardark: rgba(0,0,0,.7);
+$headerdark: rgba(0,0,0,.7);
+$bodylight: #F8F8F8;
+$sidebarlight: rgba(235, 235, 235, 0.7);
+$headerlight: rgba(235, 235, 235, 0.7);
+
+body
+{
+    &.dark
+    {
+        background: $bodydark;
+    }
+}

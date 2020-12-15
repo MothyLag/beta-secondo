@@ -1,0 +1,491 @@
+.container-fiscal-ajust
+{
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+.section-popup-fiscal
+{
+    height: 0;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1900;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.8s;
+}
+
+.all-fiscal-class
+{
+    padding-left: 30rem;
+}
+
+.header-nav-overlay-fiscal
+{
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	-moz-backdrop-filter: blur(30px);
+	-o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
+    border: 1px solid #ccc;
+    height: 3.5rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-fiscal-list
+{
+    justify-content: space-between;
+    display: flex;
+}
+
+.close-cta-fiscal
+{
+	background: url('../images/icons/cancel/close-icon.svg') no-repeat center;
+	display: inline-block;
+	line-height: 16px;
+    right: 0;
+    position: absolute;
+	transition: .5s ease all;
+	width: 16px;
+    height: 16px;
+    margin-right: 2.5rem;
+    margin-top: 1rem;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.close-cta-fiscal:hover
+{
+    opacity: 0.6;
+}
+
+.bottom-nav-overlay-fiscal
+{
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	-moz-backdrop-filter: blur(30px);
+	-o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
+    border: 1px solid #ccc;
+    height: 4rem;
+    width: 80%;
+}
+
+.main-fiscal-con
+{
+    height: 24rem;
+    width: 80%;
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	-moz-backdrop-filter: blur(30px);
+	-o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
+    overflow: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.main-fiscal-con-2
+{
+    height: 35rem;
+    width: 80%;
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	-moz-backdrop-filter: blur(30px);
+	-o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
+    overflow: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.section-fiscal-label
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.title-fiscal
+{   
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.title-sub-heading-fiscal
+{
+    font-size: 18px;
+    color: #333333;
+    margin-left: 2rem;
+    margin-top: .6rem;
+}
+
+.fiscal-item
+{
+    margin-bottom: 1.5rem;
+}
+
+.fiscal-item-flex
+{
+    display: flex;
+}
+
+.fiscal-list
+{
+    margin-bottom: 1rem;
+    
+}
+
+.fiscal-list-left
+{
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.item-info-fiscal
+{
+    display: flex;
+    padding: 2rem 3rem;
+}
+
+.fiscal-icon
+{
+    background: url('../images/icons/credit-icon.svg') no-repeat center;
+    width: 165px;
+    height: 55px;
+    display: inline-block;
+    margin-top: 0rem;
+}
+
+.title-fiscal-left
+{
+    text-align: left;
+    margin-left: 4rem;
+}
+
+.cta-center-fiscal
+{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.title-heading-fiscal
+{
+    font-size: 16px;
+    margin-bottom: .6rem;
+}
+
+.title-sub-heading-minus-fiscal
+{
+    color: #333;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.inputfis
+{
+    width: 250px;
+    height: 6px;
+    border-radius: 2px;
+    padding: 1rem 1rem;
+    font-size: 15px;
+    color: #333;
+    border: 1px solid #858585;
+    background: rgba(180, 180, 180, 0.1);
+}
+
+.inputfis:active, .inputfis:focus { border: 2px solid #007AFF; outline: none; }
+
+.input-larger
+{
+    width: 340px;
+}
+
+.inputfis::placeholder 
+{
+    color: #777;
+    opacity: 1; /* Firefox */
+}
+  
+.inputfis:-ms-input-placeholder 
+{ /* Internet Explorer 10-11 */
+   color: #777;
+}
+  
+.inputfis::-ms-input-placeholder 
+{ /* Microsoft Edge */
+   color: #777;
+}
+
+.input-select
+{
+    width: 363px;
+    height: 45px;
+    border-radius: 2px;
+    padding: 1rem 1rem;
+    font-size: 15px;
+    color: #333;
+    border: 1px solid #858585;
+    background: rgba(180, 180, 180, 0.1);
+}
+
+.cta-overlay-fiscal-right
+{
+    justify-content: center;
+    text-align: center;
+    margin-top: .7rem;
+    right: 0;
+    position: absolute;
+    margin-right: 1.5rem;
+}
+
+.cta-overlay-fiscal-left
+{
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.2rem;
+    left: 0;
+    position: absolute;
+    margin-left: 1.5rem;
+}
+
+.legal-info-fiscal
+{
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.title-legal-fiscal
+{
+    color: #777777;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.cta-link-blue-fiscal
+{
+    color: #007AFF;
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cta-link-blue-fiscal:hover
+{
+    border-bottom: 1px solid #007AFF;
+}
+
+.cta-button-blue-fiscal
+{
+	background: rgb(0,155,255);
+    background: -moz-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009bff",endColorstr="#0156cb",GradientType=1);
+    width: 75px;
+    height: 25px;
+    color: #F1F1F1;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+}
+
+.cta-button-squared-blue-fiscal
+{
+
+    border: 1px solid #007AFF;
+    width: 75px;
+    height: 25px;
+    color: #007AFF;
+    border-radius: 5px;
+    font-size: 15px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+    padding: 3px 3px;
+    background: transparent;
+    margin-right: 1rem;
+}
+
+.cta-button-blue-fiscal:hover
+{
+    background: #1AB542;
+    color: #F1F1F1;
+}
+
+.cta-button-squared-blue-fiscal:hover
+{
+    background: #007AFF;
+    color: #F1F1F1;
+}
+
+.cta-close-button-squared
+{
+    background: rgba(243, 243, 243, 0.9);
+    width: 75px;
+    height: 25px;
+    color: #585858;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+    padding: 4px 9px;
+}
+
+.cta-close-button-squared:hover
+{
+    background: rgba(255, 54, 54, 0.7);
+    color: #F1F1F1;
+}
+
+.title-center-fiscal
+{
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.title-left-fiscal
+{
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title-input-item
+{
+    color: #333;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.item-flag
+{
+    margin-right: 1rem;
+    background: rgba(243, 243, 243, 0.9);
+    width: 77px;
+    height: 27px;
+    border-radius: 2px;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.phone-info
+{
+    color: #333;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+.flag-number
+{
+    background: url('../images/flags/mexico-flag.png') center no-repeat;
+    display: inline-block;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    margin-top: .2rem;
+}
+
+.separator-fiscal
+{
+    border-bottom: 1px solid #afafaf;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px)
+{
+    .all-fiscal-class
+    {
+        padding-left: 0rem;
+    }
+
+    .header-nav-overlay-fiscal
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .bottom-nav-overlay-fiscal
+    {
+        width: 100%;
+    }
+
+    .main-fiscal-con
+    {
+        width: auto;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .main-fiscal-con-2
+    {
+        width: auto;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .input-fiscal-label
+    {
+        width: 230px;
+        height: 20px;
+        padding: 1rem 1rem;
+        font-size: 14px;
+    }
+
+    .input-phone
+    {
+        width: 110px;
+    }
+
+    .input-larger
+    {
+        width: 200px;
+    }
+
+    .cta-button-squared-blue-fiscal
+    {
+
+        width: 35px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .cta-close-button-squared
+    {
+        width: 35px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .cta-button-blue-fiscal
+    {
+        width: 60px;
+        height: 25px;
+        font-size: 13px;
+    }
+}

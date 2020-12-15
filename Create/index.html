@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+        <title>Crear - Credit!</title>
+
+        <meta property="og:url" content="https://www.icreditcom.com/Create/" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:site_name" content="Credit!" />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" type="text/css" href="v/styles/ac-main.built.css">
+        <link rel="stylesheet" type="text/css" href="ac/globalnav/styles/ac-globalnav.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/scrollbar/styles/ac-globalscrollbar.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/globalsidebar/styles/ac-globalsidebar.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/globalbottomnav/styles/bottomnav.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/popup/styles/ac-main.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/separator/styles/ac-main.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/spinner/styles/ac-globalspinner.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/global-notification/styles/ac-mai.built.css" />
+        <link rel="stylesheet" type="text/css" href="ac/wrapper-initial/styles/ac-main.built.css" />
+        <link rel="stylesheet" type="text/css" href="ws/ac-globalfonts.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="ac/favicon/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="ac/favicon/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="ac/favicon/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#000000">
+
+
+                <div class="global-head-container">
+                    <header class="header-box" data-analytics="navigation-header" role="navigation" id="navHeader">
+                        <div class="container-header">
+                            <nav class="nav">
+                                <ul class="nav-list nav-list-mobile">
+                                    <li class="nav-item">
+                                        <a class="nav-link">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link nav-link-title">
+                                            Crear
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="moreIcon">
+                                        <a onclick="openMen(); openMen2(); openMen3(); openMen4(); openMen5(); openMen6(); openMen7()" class="nav-link">
+                                            <figure class="more-icon"></figure>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item" id="closeIconn">
+                                        <a onclick="closeMen(); closeMen2(); closeMen3(); closeMen4(); closeMen5(); closeMen6(); closeMen7()" class="nav-link">
+                                            <figure class="close-circle-icon"></figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="nav-list">
+                                    <li class="nav-item nav-item-hidden">
+                                        <a href="" class="nav-link">
+                                            Créditos
+                                        </a>
+                                    </li>
+                                    <li class="nav-item nav-item-hidden">
+                                        <a href="" class="nav-link">
+                                            <div class="profile-menu-nav">
+                                                <span class="ac-profile-image-nav ac-circle-avatar-nav">
+                                                    <img src="" alt="" class="ac-avatar-img-nav circle-img">
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+
+            <script type="text/javascript">
+                window.addEventListener("scroll", function(){
+                    var header = document.querySelector(".header-box");
+                    header.classList.toggle("ac-head-sticky", window.scrollY > 0)
+                });
+            </script>
+            
+            <div class="menu-mobile" id="myMenu">
+                <div class="container-header">
+                    <ul class="menu-list">
+                        <a href="" class="cta-menu-link">
+                            <li class="menu-item-avatar">
+                                <img src="ac/globalnav/images/image.png" alt="" class="avatar-user-menu">
+                                <a href="" class="user-name-menu">
+                                    Alfonso Pérez Montalvo
+                                </a>
+                            </li>
+                        </a>
+                        <a href="" class="cta-menu-link">
+                            <li class="menu-item">
+                                <figure class="message-icon"></figure>
+                                <a href="" class="link-menu-mob">Mensajes</a>
+                            </li>
+                        </a>    
+                        <a href="" class="cta-menu-link">
+                            <li class="menu-item">
+                                <figure class="bell-icon"></figure>
+                                <a href="" class="link-menu-mob">Notificaciónes</a>
+                            </li>
+                        </a>
+                        <a href="" class="cta-menu-link">
+                            <li class="menu-item">
+                                <figure class="calculator-icon"></figure>
+                                <a href="" class="link-menu-mob">Calculadora</a>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                function openMen() {
+                document.getElementById("myMenu").style.height = "100%";
+                }
+
+                function openMen2() {
+                document.getElementById("navBottom").style.border = "none";
+                }
+
+                function openMen3() {
+                document.getElementById("navBottom").style.background = "none";
+                }
+
+                function openMen4() {
+                document.getElementById("navHeader").style.border = "none";
+                }
+
+                function openMen5() {
+                document.getElementById("navHeader").style.background = "none";
+                }
+
+                function openMen6() {
+                document.getElementById("moreIcon").style.display = "none";
+                }
+
+                function openMen7() {
+                document.getElementById("closeIconn").style.display = "block";
+                }
+                
+                function closeMen() {
+                document.getElementById("myMenu").style.height = "0";
+                }
+
+                function closeMen2() {
+                document.getElementById("closeIconn").style.display = "none";
+                }
+
+                function closeMen3() {
+                document.getElementById("moreIcon").style.display = "block";
+                }
+
+                function closeMen4() {
+                document.getElementById("navHeader").style.borderBottom = "none";
+                }
+
+                function closeMen5() {
+                document.getElementById("navHeader").style.background = "rgba(245,245,245,.75)";
+                }
+
+                function closeMen6() {
+                document.getElementById("navBottom").style.background = "rgba(245,245,245,.75)";
+                }
+
+                function closeMen7() {
+                document.getElementById("navBottom").style.borderTop = "1px solid #ccc";
+                }
+            </script>
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+        <div class="section-side-bar grey-side-bar">
+            <div class="container">
+                <ul class="side-list side-list-larger">
+                    <li class="credit-side">
+                        <a href="../" class="side-link credit"><figure class="credit-icon"></figure></a>
+                    </li>
+                    <li class="side-item side-item-search">
+                        <form onSubmit="return handleSearch()">
+                            <div class="search-box search-box-larger">
+                                <span class="icon-search"></span>
+                                <input type="text" class="search-input" placeholder="Buscar">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon explore-icon"></figure><a class="side-link explore-link" href="../">Explorar</a>
+                    </li>
+                    <li class="side-item current-item">
+                        <figure class="side-icon create-icon"></figure><a class="side-link create-link" onclick="">Crear</a>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon credits-icon"></figure><a href="../credits/" class="side-link adquired">Créditos</a>
+                    </li>
+                    <li class="side-item">
+                        <figure class="side-icon calc-icon"></figure><a href="../" class="side-link calc">Calculadora</a>
+                    </li>
+                    <li class="profile-item grid-item-profile">
+                        <a href="menu/" class="link-menu-non">
+                            <span class="profile-image circle-avatar">
+                                <img src="ac/avatars/images/image.png" alt="../menu/" class="avatar-img circle-img">
+                            </span>
+                            <a href="menu/" class="menu-link">Alfonso Pérez Montalvo</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="bottom-nav-above" id="navBottom">
+            <div class="container">
+                <ul class="bottom-list bottom-list-mobile">
+                    <li class="bottom-item">
+                        <figure class="bottom-icon explore-icon-bottom-nav"></figure>
+                        <a href="../" class="bottom-link explore">Explorar</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon create-icon-bottom-nav-blue"></figure>
+                        <a class="bottom-link create current-bottom-link" onclick="openOver()">Crear</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon credits-icon-bottom-nav"></figure>
+                        <a href="" class="bottom-link adquired">Créditos</a>
+                    </li>
+                    <li class="bottom-item">
+                        <figure class="bottom-icon search-icon-bottom-nav"></figure>
+                        <a onclick="openSear()" class="bottom-link calc">Buscar</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--- MAIN --->   
+
+        <main class="main-wrappers">   
+            <div class="container-wrap">
+                <section class="hero-initial wrapper-initial-section">
+                    <div class="container-blur">
+                        <div class="square-blur-info">
+                            <div class="blur-section-info blur-black">
+                                <div class="title title-blur">
+                                    <h2 class="title-sub-heading title-sub-heading-white">
+                                        Crear
+                                    </h2>
+                                    <h4 class="title-description-minus">Publica créditos y saca rentabilidad de ello.</h4>
+                                </div>
+                                <div class="cta-left">
+                                    <a href="" class="cta-link-white">¿Cómo crear créditos?</a>
+                                    <figure class="north-arrow"></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+
+                <section class="menu-selection wrapper-create wrapper-top-margin">
+                    <div class="container-wrappers">
+                        <div class="background-wrapper-larger">
+                            <div class="main-column">
+                                <div class="column-grid">
+                                    <li class="column-label-grid margin-top-adult">
+                                        <div class="absolute-label-column">
+                                            <select name="monto" class="selection-label">
+                                                <option>Ingrese un monto a prestar</option> 
+                                                <option>$1,000.00 MXN</option>
+                                                <option>$1,100.00 MXN</option>
+                                                <option>$1,200.00 MXN</option>
+                                                <option>$1,300.00 MXN</option>
+                                                <option>$1,400.00 MXN</option>
+                                                <option>$1,500.00 MXN</option>
+                                                <option>$1,600.00 MXN</option>
+                                                <option>$1,700.00 MXN</option>
+                                                <option>$1,800.00 MXN</option>
+                                                <option>$1,900.00 MXN</option>
+                                                <option>$2,000.00 MXN</option>
+                                                <option>$2,100.00 MXN</option>
+                                                <option>$2,200.00 MXN</option>
+                                                <option>$2,300.00 MXN</option>
+                                                <option>$2,400.00 MXN</option>
+                                                <option>$2,500.00 MXN</option>
+                                                <option>$2,600.00 MXN</option>
+                                                <option>$2,700.00 MXN</option>
+                                                <option>$2,800.00 MXN</option>
+                                                <option>$2,900.00 MXN</option>
+                                                <option>$3,000.00 MXN</option>
+                                                <option>$3,100.00 MXN</option>
+                                                <option>$3,200.00 MXN</option>
+                                                <option>$3,300.00 MXN</option>
+                                                <option>$3,400.00 MXN</option>
+                                                <option>$3,500.00 MXN</option>
+                                                <option>$3,600.00 MXN</option>
+                                                <option>$3,700.00 MXN</option>
+                                                <option>$3,800.00 MXN</option>
+                                                <option>$3,900.00 MXN</option>
+                                                <option>$4,000.00 MXN</option>
+                                                <option>$4,100.00 MXN</option>
+                                                <option>$4,200.00 MXN</option>
+                                                <option>$4,300.00 MXN</option>
+                                                <option>$4,400.00 MXN</option>
+                                                <option>$4,500.00 MXN</option>
+                                                <option>$4,600.00 MXN</option>
+                                                <option>$4,700.00 MXN</option>
+                                                <option>$4,800.00 MXN</option>
+                                                <option>$4,900.00 MXN</option>
+                                                <option>$5,000.00 MXN</option>
+                                                <option>$5,100.00 MXN</option>
+                                                <option>$5,200.00 MXN</option>
+                                                <option>$5,300.00 MXN</option>
+                                                <option>$5,400.00 MXN</option>
+                                                <option>$5,500.00 MXN</option>
+                                                <option>$5,600.00 MXN</option>
+                                                <option>$5,700.00 MXN</option>
+                                                <option>$5,800.00 MXN</option>
+                                                <option>$5,800.00 MXN</option>
+                                                <option>$5,900.00 MXN</option>
+                                                <option>$6,000.00 MXN</option>
+                                                <option>$6,100.00 MXN</option>
+                                                <option>$6,200.00 MXN</option>
+                                                <option>$6,300.00 MXN</option>
+                                                <option>$6,400.00 MXN</option>
+                                                <option>$6,500.00 MXN</option>
+                                                <option>$6,600.00 MXN</option>
+                                                <option>$6,700.00 MXN</option>
+                                                <option>$6,800.00 MXN</option>
+                                                <option>$6,900.00 MXN</option>
+                                                <option>$7,000.00 MXN</option>
+                                                <option>$7,100.00 MXN</option>
+                                                <option>$7,200.00 MXN</option>
+                                                <option>$7,300.00 MXN</option>
+                                                <option>$7,400.00 MXN</option>
+                                                <option>$7,500.00 MXN</option>
+                                                <option>$7,600.00 MXN</option>
+                                                <option>$7,700.00 MXN</option>
+                                                <option>$7,800.00 MXN</option>
+                                                <option>$7,900.00 MXN</option>
+                                                <option>$8,000.00 MXN</option>
+                                                <option>$8,100.00 MXN</option>
+                                                <option>$8,200.00 MXN</option>
+                                                <option>$8,300.00 MXN</option>
+                                                <option>$8,400.00 MXN</option>
+                                                <option>$8,500.00 MXN</option>
+                                                <option>$8,600.00 MXN</option>
+                                                <option>$8,700.00 MXN</option>
+                                                <option>$8,800.00 MXN</option>
+                                                <option>$8,900.00 MXN</option>
+                                                <option>$9,000.00 MXN</option>
+                                                <option>$9,100.00 MXN</option>
+                                                <option>$9,200.00 MXN</option>
+                                                <option>$9,300.00 MXN</option>
+                                                <option>$9,400.00 MXN</option>
+                                                <option>$9,500.00 MXN</option>
+                                                <option>$9,600.00 MXN</option>
+                                                <option>$9,700.00 MXN</option>
+                                                <option>$9,800.00 MXN</option>
+                                                <option>$9,900.00 MXN</option>
+                                                <option>$10,000.00 MXN</option>
+                                                <option>$10,100.00 MXN</option>
+                                                <option>$10,200.00 MXN</option>
+                                                <option>$10,300.00 MXN</option>
+                                                <option>$10,400.00 MXN</option>
+                                                <option>$10,500.00 MXN</option>
+                                                <option>$10,600.00 MXN</option>
+                                                <option>$10,700.00 MXN</option>
+                                                <option>$10,800.00 MXN</option>
+                                                <option>$10,900.00 MXN</option>
+                                                <option>$11,000.00 MXN</option>
+                                                <option>$11,100.00 MXN</option>
+                                                <option>$11,200.00 MXN</option>
+                                                <option>$11,300.00 MXN</option>
+                                                <option>$11,400.00 MXN</option>
+                                                <option>$11,500.00 MXN</option>
+                                                <option>$11,600.00 MXN</option>
+                                                <option>$11,700.00 MXN</option>
+                                                <option>$11,800.00 MXN</option>
+                                                <option>$11,900.00 MXN</option>
+                                                <option>$12,000.00 MXN</option>
+                                                <option>$12,100.00 MXN</option>
+                                                <option>$12,200.00 MXN</option>
+                                                <option>$12,300.00 MXN</option>
+                                                <option>$12,400.00 MXN</option>
+                                                <option>$12,500.00 MXN</option>
+                                                <option>$12,600.00 MXN</option>
+                                                <option>$12,700.00 MXN</option>
+                                                <option>$12,800.00 MXN</option>
+                                                <option>$12,900.00 MXN</option>
+                                                <option>$13,000.00 MXN</option>
+                                                <option>$13,100.00 MXN</option>
+                                                <option>$13,200.00 MXN</option>
+                                                <option>$13,300.00 MXN</option>
+                                                <option>$13,400.00 MXN</option>
+                                                <option>$13,500.00 MXN</option>
+                                                <option>$13,600.00 MXN</option>
+                                                <option>$13,700.00 MXN</option>
+                                                <option>$13,800.00 MXN</option>
+                                                <option>$13,900.00 MXN</option>
+                                                <option>$14,000.00 MXN</option>
+                                                <option>$14,100.00 MXN</option>
+                                                <option>$14,200.00 MXN</option>
+                                                <option>$14,300.00 MXN</option>
+                                                <option>$14,400.00 MXN</option>
+                                                <option>$14,500.00 MXN</option>
+                                                <option>$14,600.00 MXN</option>
+                                                <option>$14,700.00 MXN</option>
+                                                <option>$14,800.00 MXN</option>
+                                                <option>$14,900.00 MXN</option>
+                                                <option>$15,000.00 MXN</option>
+                                                <option>$15,100.00 MXN</option>
+                                                <option>$15,200.00 MXN</option>
+                                                <option>$15,300.00 MXN</option>
+                                                <option>$15,400.00 MXN</option>
+                                                <option>$15,500.00 MXN</option>
+                                                <option>$15,600.00 MXN</option>
+                                                <option>$15,700.00 MXN</option>
+                                                <option>$15,800.00 MXN</option>
+                                                <option>$15,900.00 MXN</option>
+                                                <option>$16,000.00 MXN</option>
+                                                <option>$16,100.00 MXN</option>
+                                                <option>$16,200.00 MXN</option>
+                                                <option>$16,300.00 MXN</option>
+                                                <option>$16,400.00 MXN</option>
+                                                <option>$16,500.00 MXN</option>
+                                                <option>$16,600.00 MXN</option>
+                                                <option>$16,700.00 MXN</option>
+                                                <option>$16,800.00 MXN</option>
+                                                <option>$16,900.00 MXN</option>
+                                                <option>$17,000.00 MXN</option>
+                                                <option>$17,100.00 MXN</option>
+                                                <option>$17,200.00 MXN</option>
+                                                <option>$17,300.00 MXN</option>
+                                                <option>$17,400.00 MXN</option>
+                                                <option>$17,500.00 MXN</option>
+                                                <option>$17,600.00 MXN</option>
+                                                <option>$17,700.00 MXN</option>
+                                                <option>$17,800.00 MXN</option>
+                                                <option>$17,900.00 MXN</option>
+                                                <option>$18,000.00 MXN</option>
+                                                <option>$18,100.00 MXN</option>
+                                                <option>$18,200.00 MXN</option>
+                                                <option>$18,300.00 MXN</option>
+                                                <option>$18,400.00 MXN</option>
+                                                <option>$18,500.00 MXN</option>
+                                                <option>$18,600.00 MXN</option>
+                                                <option>$18,700.00 MXN</option>
+                                                <option>$18,800.00 MXN</option>
+                                                <option>$18,900.00 MXN</option>
+                                                <option>$19,000.00 MXN</option>
+                                                <option>$19,100.00 MXN</option>
+                                                <option>$19,200.00 MXN</option>
+                                                <option>$19,300.00 MXN</option>
+                                                <option>$19,400.00 MXN</option>
+                                                <option>$19,500.00 MXN</option>
+                                                <option>$19,600.00 MXN</option>
+                                                <option>$19,700.00 MXN</option>
+                                                <option>$19,800.00 MXN</option>
+                                                <option>$19,900.00 MXN</option>
+                                                <option>$20,000.00 MXN</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="column-grid">
+                                    <li class="column-label-grid">
+                                        <select name="monto" class="selection-label">
+                                            <option>Ingrese un interes semanal</option>
+                                            <option>0.5% semanal</option>
+                                            <option>1% semanal</option>
+                                            <option>1.5% semanal</option>
+                                            <option>2% semanal</option>
+                                            <option>2.5% semanal</option>
+                                            <option>3% semanal</option>
+                                            <option>3.5% semanal</option>
+                                            <option>4% semanal</option>
+                                            <option>4.5% semanal</option>
+                                            <option>5% semanal</option>
+                                        </select>
+                                    </li>
+                                </div>
+                                <div class="column-grid">
+                                    <li class="column-label-grid">
+                                        <select name="monto" class="selection-label">
+                                            <option>Ingrese un plazo a pagar</option>
+                                            <option>28 semanas</option>
+                                            <option>44 semanas</option>
+                                            <option>76 semanas</option>
+                                            <option>124 semanas</option>
+                                        </select>
+                                    </li>
+                                </div>
+                                <div class="column-grid">
+                                    <li class="column-label-grid">
+                                        <select name="monto" class="selection-label">
+                                            <option>Ingrese un inicio de pago</option>
+                                            <option>1 semanas</option>
+                                            <option>2 semanas</option>
+                                            <option>3 semanas</option>
+                                            <option>4 semanas</option>
+                                            <option>5 semanas</option>
+                                        </select>
+                                    </li>
+                                </div>
+
+                                <div class="cta-button-blue">
+                                    <button class="button-cta">Publicar</button>
+                                </div>
+
+                                <div class="cta-extra cta-center">
+                                    <h4 class="text-terms">Al publicar crédito(s) usted esta aceptando los <a href="" class="cta-link-blue"> términos y condiciones. </a> </h4>
+                                    <a href="" class="cta-link-blue cta-top">Ayuda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main> 
+
+
+
+    </body>
+</html>  

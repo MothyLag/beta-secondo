@@ -1,0 +1,221 @@
+.container-fiscal-ajust
+{
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+.section-popup-fiscal
+{
+    height: 0;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1900;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.8s;
+    backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+	-moz-backdrop-filter: blur(30px);
+	-o-backdrop-filter: blur(30px);
+    -ms-backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.all-fiscal-class
+{
+    padding-top: 8rem;
+}
+
+.header-nav-overlay-fiscal
+{
+    background: rgba(245, 245, 245, 0.65);
+    border-bottom: 1px solid #777;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.header-fiscal-list
+{
+    justify-content: space-between;
+    display: flex;
+}
+
+.close-cta-fiscal
+{
+	background: url('../images/icons/cancel/close-icon.svg') no-repeat center;
+	display: inline-block;
+	line-height: 16px;
+    right: 0;
+    position: absolute;
+	transition: .5s ease all;
+	width: 16px;
+    height: 16px;
+    margin-right: 31.5rem;
+    margin-top: 2rem;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.close-cta-fiscal:hover
+{
+    opacity: 0.6;
+}
+
+.bottom-nav-overlay-fiscal
+{
+    background: rgba(245, 245, 245, 0.65);
+    border-top: 1px solid #777;
+    height: 10rem;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.main-fiscal-con
+{
+    height: 25rem;
+    width: 100%;
+    background: rgba(245, 245, 245, 0.65);
+    overflow: auto;
+    text-align: center;
+}
+
+.section-fiscal-label
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.title-fiscal
+{   
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.title-sub-heading-fiscal
+{
+    font-size: 20px;
+    color: #333333;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.fiscal-item
+{
+    margin-top: 3rem;
+}
+
+.fiscal-list
+{
+    margin-bottom: 5rem;
+}
+
+.input-fiscal-label
+{
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    background: rgba(180, 180, 180, 0.5);
+    padding: 1rem 1rem;
+    font-size: 17px;
+    color: #111111;
+}
+
+.input-fiscal-label::placeholder 
+{
+    color: #333333;
+    opacity: 1; /* Firefox */
+}
+  
+.input-fiscal-label:-ms-input-placeholder 
+{ /* Internet Explorer 10-11 */
+   color: #333333;
+}
+  
+.input-fiscal-label::-ms-input-placeholder 
+{ /* Microsoft Edge */
+   color: #333333;
+}
+
+.input-fiscal-label:focus
+{
+    border: 1px solid #007AFF;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+    box-shadow: 0px 0px 14px 0px rgba(0,115,255,0.67);
+}
+
+.cta-overlay-fiscal-right
+{
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    right: 0;
+    position: absolute;
+    margin-right: 31.5rem;
+}
+
+.cta-overlay-fiscal-left
+{
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    left: 0;
+    position: absolute;
+    margin-left: 31.5rem;
+}
+
+.cta-button-blue-fiscal
+{
+	background: rgb(0,155,255);
+    background: -moz-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    background: linear-gradient(180deg, rgba(0,155,255,1) 0%, rgba(1,86,203,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009bff",endColorstr="#0156cb",GradientType=1);
+    width: 100px;
+    height: 30px;
+    color: #F1F1F1;
+    border-radius: 60px;
+    border: none;
+    font-size: 17px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+}
+
+.cta-button-squared-blue-fiscal
+{
+
+    border: 1px solid #007AFF;
+    width: 180px;
+    height: 35px;
+    color: #007AFF;
+    border-radius: 5px;
+    font-size: 17px;
+	cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 9rem;
+    padding: 5px 5px;
+    background: transparent;
+    margin-top: 2rem;
+}
+
+.cta-button-blue-fiscal:hover
+{
+	opacity: 0.5;
+}
+
+.cta-button-squared-blue-fiscal:hover
+{
+    opacity: 0.5;
+}
+
