@@ -12,10 +12,12 @@ $(document).ready(function() {
 		})
 		.done(function(data) {
 			if(data){
+				openAlarg();
+				
 				console.log(data);
 			}else{
 				console.log(data);
-				openAlarg();
+				openOver();
 			}
 		})
 		.fail(function() {
