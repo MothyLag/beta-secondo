@@ -7,6 +7,7 @@
 
         <title>Inicio - Credit!</title>
 
+
         <meta property="og:url" content="https://www.icreditcom.com/Inicio/" />
         <meta property="og:locale" content="es_MX" />
         <meta property="og:site_name" content="CREDIT" />
@@ -38,6 +39,7 @@
         
 
   </head>
+
     <body class="hide-spinner" id="body-background">
         
                 <div class="global-head-container">
@@ -92,6 +94,8 @@
                     header.classList.toggle("ac-head-sticky", window.scrollY > 0)
                 });
             </script>
+
+
             
             <div class="menu-mobile" id="myMenu">
                 <div class="container-header">
@@ -183,8 +187,11 @@
                 document.getElementById("navBottom").style.borderTop = "1px solid #ccc";
                 }
             </script>
+
+
     
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
 
         <div class="section-side-bar grey-side-bar">
             <div class="container">
@@ -287,111 +294,8 @@
                 </div>
                 
                 <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="ac-title-card">
-                                
-                                <div class="ac-sun-spec">
-                                    <figure class="sun-icon"></figure>
-                                </div>
-                                <h2 class="ac-amount-title">$40,000 MXN</h2>
-                            </div>
-                            <div class="ac-title-specs">
-                                <h3 class="ac-title-sub-heading">Interes: 1%</h3>
-                                <h3 class="ac-title-sub-heading">Plazo a pagar: 128 semanas</h3>
-                                <h3 class="ac-title-sub-heading">Inicio de pago: 4 semanas</h3>
-                            </div>
-                            <div class="ac-person-spec">
-                                <h2 class="ac-person-name"></h2>
-                            </div>
-                            <div class="ac-cta">
-                                <a class="cta-link-card" onclick="openCredit()">Ver más</a>
-                            </div>
-                        </div>
-
-
-
-                        <div class="swiper-slide">
-                        <div class="ac-title-card">
-                            
-                            <div class="ac-sun-spec">
-                                <figure class="sun-icon"></figure>
-                            </div>
-                            <h2 class="ac-amount-title">$10,600 MXN</h2>
-                        </div>
-                            <div class="ac-title-specs">
-                                <h3 class="ac-title-sub-heading">Interes: 0.5%</h3>
-                                <h3 class="ac-title-sub-heading">Plazo a pagar: 76 semanas</h3>
-                                <h3 class="ac-title-sub-heading">Inicio de pago: 3 semanas</h3>
-                            </div>
-                            <div class="ac-person-spec">
-                                <h2 class="ac-person-name"></h2>
-                            </div>
-                            <div class="ac-cta">
-                                <a class="cta-link-card" id="watch-credit">Ver más</a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                        <div class="ac-title-card">
-                            
-                        <div class="ac-sun-spec">
-                            <figure class="sun-icon"></figure>
-                        </div>
-                        <h2 class="ac-amount-title">$30,880 MXN</h2>
-                        </div>
-                        <div class="ac-title-specs">
-                            <h3 class="ac-title-sub-heading">Interes: 1.5%</h3>
-                            <h3 class="ac-title-sub-heading">Plazo a pagar: 128 semanas</h3>
-                            <h3 class="ac-title-sub-heading">Inicio de pago: 4 semanas</h3>
-                        </div>
-                        <div class="ac-person-spec">
-                            <h2 class="ac-person-name"></h2>
-                        </div>
-                        <div class="ac-cta">
-                            <a class="cta-link-card" id="watch-credit">Ver más</a>
-                        </div>
-                        </div>
-                        <div class="swiper-slide">
-                        <div class="ac-title-card">
-                            
-                            <div class="ac-sun-spec">
-                                <figure class="sun-icon"></figure>
-                            </div>
-                            <h2 class="ac-amount-title">$4,600 MXN</h2>
-                        </div>
-                        <div class="ac-title-specs">
-                            <h3 class="ac-title-sub-heading">Interes: 2%</h3>
-                            <h3 class="ac-title-sub-heading">Plazo a pagar: 64 semanas</h3>
-                            <h3 class="ac-title-sub-heading">Inicio de pago: 2 semanas</h3>
-                        </div>
-                        <div class="ac-person-spec">
-                            <h2 class="ac-person-name"></h2>
-                        </div>
-                        <div class="ac-cta">
-                            <a class="cta-link-card" id="watch-credit">Ver más</a>
-                        </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="ac-title-card">
-                                
-                                <div class="ac-sun-spec">
-                                    <figure class="sun-icon"></figure>
-                                </div>
-                                <h2 class="ac-amount-title">$4,600 MXN</h2>
-                            </div>
-                            <div class="ac-title-specs">
-                                <h3 class="ac-title-sub-heading">Interes: 2%</h3>
-                                <h3 class="ac-title-sub-heading">Plazo a pagar: 64 semanas</h3>
-                                <h3 class="ac-title-sub-heading">Inicio de pago: 2 semanas</h3>
-                            </div>
-                            <div class="ac-person-spec">
-                                <h2 class="ac-person-name"></h2>
-                            </div>
-                            <div class="ac-cta">
-                                <a class="cta-link-card" id="watch-credit">Ver más</a>
-                            </div>
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper" id="dynamicCards" >
+                        
     
                     </div>
                 </div>
@@ -400,22 +304,7 @@
 
         
 
-        <script src="ac/swipes/scripts/swiper.min.js"></script><script>
-            var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true,
-            },
-            pagination: {el: '.swiper-pagination',},
-        });
-        </script>
+        <script src="ac/swipes/scripts/swiper.min.js"></script>
 
         <div class="credit-view-section" id="viewCredit">
             <div class="main-wrappers">   
@@ -1075,7 +964,7 @@
             </div>    
         </div>
 
-        <script src="js/jquery-3.5.1.js" ></script>
+       <script src="js/jquery-3.5.1.js" ></script>
         <script src="js/main.js" ></script>
     </body>
 </html>    

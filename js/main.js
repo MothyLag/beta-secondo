@@ -1,5 +1,34 @@
 $(document).ready(function() {
 
+	$.ajax({
+		url: 'http://localhost:4000/credits/list'
+	})
+	.done(function(data) {
+
+		data.map((actual)=>{
+			var added = '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$'+actual.monto+' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: '+actual.interes+'%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: '+actual.plazo+' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: '+actual.inicioPago+' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit()">Ver más</a></div></div>';
+			$("#dynamicCards").append(added);
+		});
+		var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+            },
+            pagination: {el: '.swiper-pagination',},
+         });
+	})
+	.fail(function() {
+		
+	});
+	
+
 	$("#solicitarCreditoPc").click(function(event) {
 		//openAlarg();
 		//localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDkzZGQ3YTk1NGMzMGVkNWRjNjBkNyIsImlhdCI6MTYwODA3MjY2M30.waCYt33YBVvWqDuqJmnf_0jGb1ijgafeJbg0_Kh_dK0");
@@ -12,19 +41,15 @@ $(document).ready(function() {
 		}).done(function(data) {
 				if(data){
 					openAlarg();
-					
-					console.log(data);
 				}else{
-					console.log(data);
 					openReg();
 				}
 		}).fail(function() {
-				console.log("error");
+
 		});			
 	});
 
 	$("#sendFiscalData").click(function(event) {
-		var rfc = $("#rfc").val();
 		if(
 			rfc = $("#rfc").val().length 			!= 12 ||
 			$("#curp").val().length 				== 0 ||
