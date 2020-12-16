@@ -6,7 +6,7 @@ $(document).ready(function() {
 	.done(function(data) {
 		console.log(data);
 		data.map((actual)=>{
-			var added = '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$'+actual.monto+' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: '+actual.interes+'%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: '+actual.plazo+' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: '+actual.inicioPago+' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit('+actual._id+', '+actual.monto+', '+actual.interes+', '+actual.plazo+', '+actual.inicioPago+')">Ver más</a></div></div>';
+			var added = "<div class='swiper-slide'><div class='ac-title-card'><div class='ac-sun-spec'><figure class='sun-icon'></figure></div><h2 class='ac-amount-title'>$'+actual.monto+' MXN</h2></div><div class='ac-title-specs'><h3 class='ac-title-sub-heading'>Interes: '+actual.interes+'%</h3><h3 class='ac-title-sub-heading'>Plazo a pagar: '+actual.plazo+' semanas</h3><h3 class='ac-title-sub-heading'>Inicio de pago: '+actual.inicioPago+' semanas</h3></div><div class='ac-person-spec'><h2 class='ac-person-name'></h2></div><div class='ac-cta'><a class='cta-link-card' onclick='openCredit(5fd998225912a252aa65152b, 10000, 10, 63, 6)'>Ver más</a></div></div>";
 			$("#dynamicCards").append(added);
 		});
 		var swiper = new Swiper('.swiper-container', {
