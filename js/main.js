@@ -1,50 +1,6 @@
 $(document).ready(function () {
-  $.ajax({
-    url: "http://localhost:4000/credits/list",
-  })
-    .done(function (data) {
-      console.log(data);
-      var added ="";
-      data.map((actual) => {
-        added =added+
-          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-          actual.monto +
-          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-          actual.interes +
-          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-          actual.plazo +
-          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-          actual.inicioPago +
-          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-          actual._id +
-          "','" +
-          actual.monto +
-          "','" +
-          actual.interes +
-          "','" +
-          actual.plazo +
-          "','" +
-          actual.inicioPago +
-          "')\">Ver más</a></div></div>";
-        
-      });
-      $("#dynamicCards").html(added);
-      var swiper = new Swiper(".swiper-container", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: { el: ".swiper-pagination" },
-      });
-    })
-    .fail(function () {});
+
+	getSliders();
 
     $.ajax({
     	url: 'http://localhost:4000/users/getInfo',
@@ -58,195 +14,7 @@ $(document).ready(function () {
     });
 
     $("#searchInput").keyup(function(event) {
-    	if($("#searchInput").val().length!=0){
-    		$.ajax({
-    			url: 'http://localhost:4000/credits/filter/'+$("#searchInput").val(),
-    		})
-    		.done(function(data) {
-    			var added ="";
-    			data.map((actual) => {
-			         added =added+
-			          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-			          actual.monto +
-			          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-			          actual.interes +
-			          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-			          actual.plazo +
-			          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-			          actual.inicioPago +
-			          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-			          actual._id +
-			          "','" +
-			          actual.monto +
-			          "','" +
-			          actual.interes +
-			          "','" +
-			          actual.plazo +
-			          "','" +
-			          actual.inicioPago +
-			          "')\">Ver más</a></div></div>";
-			        
-			      });
-    				$("#dynamicCards").html(added);
-			      var swiper = new Swiper(".swiper-container", {
-			        effect: "coverflow",
-			        grabCursor: true,
-			        centeredSlides: true,
-			        slidesPerView: "auto",
-			        coverflowEffect: {
-			          rotate: 50,
-			          stretch: 0,
-			          depth: 100,
-			          modifier: 1,
-			          slideShadows: true,
-			        },
-			        pagination: { el: ".swiper-pagination" },
-			      });
-    		})
-    		.fail(function() {
-    			$.ajax({
-    url: "http://localhost:4000/credits/list",
-  })
-    .done(function (data) {
-      console.log(data);
-      var added ="";
-      data.map((actual) => {
-        added =added+
-          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-          actual.monto +
-          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-          actual.interes +
-          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-          actual.plazo +
-          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-          actual.inicioPago +
-          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-          actual._id +
-          "','" +
-          actual.monto +
-          "','" +
-          actual.interes +
-          "','" +
-          actual.plazo +
-          "','" +
-          actual.inicioPago +
-          "')\">Ver más</a></div></div>";
-        
-      });
-      $("#dynamicCards").html(added);
-      var swiper = new Swiper(".swiper-container", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: { el: ".swiper-pagination" },
-      });
-    })
-    .fail(function () {});
-    		})
-    		.error(function() {
-    			$.ajax({
-    url: "http://localhost:4000/credits/list",
-  })
-    .done(function (data) {
-      console.log(data);
-      var added ="";
-      data.map((actual) => {
-        added =added+
-          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-          actual.monto +
-          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-          actual.interes +
-          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-          actual.plazo +
-          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-          actual.inicioPago +
-          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-          actual._id +
-          "','" +
-          actual.monto +
-          "','" +
-          actual.interes +
-          "','" +
-          actual.plazo +
-          "','" +
-          actual.inicioPago +
-          "')\">Ver más</a></div></div>";
-        
-      });
-      $("#dynamicCards").htm(added);
-      var swiper = new Swiper(".swiper-container", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: { el: ".swiper-pagination" },
-      });
-    })
-    .fail(function () {});
-    		});;	
-    	}else{
-    		$.ajax({
-			    url: "http://localhost:4000/credits/list",
-			  })
-			    .done(function (data) {
-			      console.log(data);
-			      var added ="";
-			      data.map((actual) => {
-			        var added = added+
-			          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-			          actual.monto +
-			          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-			          actual.interes +
-			          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-			          actual.plazo +
-			          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-			          actual.inicioPago +
-			          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-			          actual._id +
-			          "','" +
-			          actual.monto +
-			          "','" +
-			          actual.interes +
-			          "','" +
-			          actual.plazo +
-			          "','" +
-			          actual.inicioPago +
-			          "')\">Ver más</a></div></div>";
-			        
-			      });
-			      $("#dynamicCards").html(added);
-			      var swiper = new Swiper(".swiper-container", {
-			        effect: "coverflow",
-			        grabCursor: true,
-			        centeredSlides: true,
-			        slidesPerView: "auto",
-			        coverflowEffect: {
-			          rotate: 50,
-			          stretch: 0,
-			          depth: 100,
-			          modifier: 1,
-			          slideShadows: true,
-			        },
-			        pagination: { el: ".swiper-pagination" },
-			      });
-			    })
-			    .fail(function () {});
-    	}
+    	getSliders();
     });
 
 
@@ -329,3 +97,57 @@ $(document).ready(function () {
     }
   });
 });
+
+function getSliders(){
+	$.ajax({
+		url: 'http://localhost:4000/credits/filter/'+$("#searchInput").val(),
+	})
+	.done(function(data) {
+		var added ='<div class="swiper-container"><div class="swiper-wrapper" id="dynamicCards" >';
+		data.map((actual) => {
+	         added =added+
+	          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+	          actual.monto +
+	          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+	          actual.interes +
+	          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+	          actual.plazo +
+	          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+	          actual.inicioPago +
+	          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+	          actual._id +
+	          "','" +
+	          actual.monto +
+	          "','" +
+	          actual.interes +
+	          "','" +
+	          actual.plazo +
+	          "','" +
+	          actual.inicioPago +
+	          "')\">Ver más</a></div></div>";
+	        
+	      });
+		added =added+'</div></div>';
+			$("#genSwipper").html(added);
+			
+				var swiper = new Swiper(".swiper-container", {
+			        effect: "coverflow",
+			        grabCursor: true,
+			        centeredSlides: true,
+			        slidesPerView: "auto",
+			        coverflowEffect: {
+			          rotate: 50,
+			          stretch: 0,
+			          depth: 100,
+			          modifier: 1,
+			          slideShadows: true,
+			        },
+			        pagination: { el: ".swiper-pagination" },
+		      });
+			
+	      	
+	})
+	.fail(function() {
+
+	});
+}
