@@ -1,4 +1,4 @@
-function openCredit() {
+function openCredit(uno, dos, tres, cuatro, cinco) {
     document.getElementById("viewCredit").style.width = "100%";
     document.getElementById("sideAdq").style.width= "250px";
     document.getElementById("sideAdq").style.opacity= "1";
