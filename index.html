@@ -403,16 +403,8 @@
                                     <h2 class="format-alert-title">
                                         Solicitud de
                                     </h2>
-                                    <h2 class="title-heading-alert">
+                                    <h2 class="title-heading-alert" id="nameRequest" >
                                         Alfonso Pérez Montalvo.
-                                    </h2>
-                                </div>
-                                <div class="title-container-alert">
-                                    <h2 class="format-alert-title">
-                                        Crédito de
-                                    </h2>
-                                    <h2 class="title-heading-alert">
-                                        Alberto Guzman Torres.
                                     </h2>
                                 </div>
                                 <h2 class="text-heading-alert">
@@ -422,8 +414,8 @@
                                     <figure class="p2p-icon-alert"></figure>
                                 </div>
                             </div>
-                            <div class="cta-center-alert">
-                                <a href="" class="cta-button-alert">Continuar</a>
+                            <div class="cta-center-alert" id="buttonConfirmCredit" >
+                                <button onclick="confirmCredit(1)" class="cta-button-alert">Continuar</button>
                             </div>
                         </div>
                     </div>
@@ -442,17 +434,45 @@
                       },
                     }).done(function (data) {
                         if (data) {
+                            var addeded=
+                            '<button onclick="confirmCredit(\''+id+"'"+')\" class="cta-button-alert">Continuar</button>'
+                            ;
+                            $("#buttonConfirmCredit").html(addeded);
                             document.getElementById("alertLarge").style.height = "100%";
                             document.getElementById("preloaderAlert").style.overflow = "visible";
                         } else {
                           openReg();
                         }
-                      }).fail(function () {});
-                    }); 
+                    }).fail(function () {});
+                }); 
             }
             
             function closeAlarg() {
               document.getElementById("alertLarge").style.height = "0";
+            }
+
+            function confirmCredit(id){
+                $(document).ready(function() {
+                    $.ajax({
+                        url: 'http://localhost:4000/creditRequest/create',
+                        headers: {
+                            Authorization: "Bearer " + localStorage.getItem("token"),
+                        },
+                        type: 'POST',
+                        data: {creditId: id},
+                    })
+                    .done(function(data) {
+                        if(!data._id){
+                            alert("ha ocurrido un error");
+                        }else{
+                            closeAlarg();
+                        }
+                    })
+                    .fail(function() {
+                        console.log("error");
+                    });
+                 
+                });                 
             }
         </script>
 
@@ -521,8 +541,8 @@
                             <figure class="p2p-icon-alert"></figure>
                         </div>
                     </div>
-                    <div class="cta-center-alert">
-                        <a href="" class="cta-button-alert">Continuar</a>
+                    <div class="cta-center-alert" id="confirmCredit">
+                        <button onclick="confirmCredit(1)" class="cta-button-alert">Continuar</button>
                     </div>
                 </div>
             </div>

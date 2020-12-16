@@ -44,6 +44,17 @@ $(document).ready(function () {
     })
     .fail(function () {});
 
+    $.ajax({
+    	url: 'http://localhost:4000/users/getInfo',
+    	headers: {
+       		Authorization: "Bearer " + localStorage.getItem("token"),
+      	},
+    }).done(function(data) {
+    	$("#nameRequest").html(data.name+" "+data.lastName);
+    }).fail(function() {
+    	console.log("error");
+    });
+    
 
 
   $("#solicitarCreditoPc").click(function (event) {
@@ -123,43 +134,5 @@ $(document).ready(function () {
           alert("Ha ocurrido un error, por favor, verifique los datos");
         });
     }
-    /*$.ajax({
-			url: 'http://localhost:4000/fiscal/createFiscal',
-			type: 'POST',
-			headers: {
-				"Authorization": "Bearer "+localStorage.getItem('token')
-			},
-			data: {
-				'rfc': $("#rfc").val(),
-				'curp': $("#curp").val(),
-				'address': $("#address").val(),
-				'postal': $("#cp").val(),
-				'social': $("#social").val(),
-				'email': $("#email").val(),
-				'phone': $("#phone").val(),
-				'occupation': $("#occupation").val(),
-				'monthlyIncome': $("#monthlyIncome").val(),
-				'workplace': $("#workplace").val(),
-				'academic': $("#academic option:selected" ).text(),
-				'reference': $("#reference").val(),
-				'beneficiary': $("#beneficiary").val()
-			}
-			
-		})
-		.done(function(data) {
-			if(!data.id){
-				alert("Ha ocurrido un error, por favor, verifique los datos");	
-			}else{
-				console.log(data);
-			}
-		})
-		.fail(function() {
-			alert("Ha ocurrido un error, por favor, verifique los datos");
-		})
-		.error(function() {
-			alert("Ha ocurrido un error, por favor, verifique los datos");
-		});
-		
-		*/
   });
 });
