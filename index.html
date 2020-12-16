@@ -420,7 +420,6 @@
 
         <script>
             function openAlarg(id) {
-                alert(id);
                 $(document).ready(function() {
                    $.ajax({
                       url: "http://localhost:4000/users/hasFiscal",
@@ -461,6 +460,7 @@
                             alert("ha ocurrido un error");
                         }else{
                             closeAlarg();
+                            alert("Nuevo crédito aprobado");
                         }
                     })
                     .fail(function() {
