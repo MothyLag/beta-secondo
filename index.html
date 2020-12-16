@@ -216,9 +216,9 @@
                     <li class="side-item">
                         <figure class="side-icon credits-icon"></figure><a href="credits/" class="side-link adquired">Créditos</a>
                     </li>
-                    <li class="side-item">
+                    <!--li class="side-item">
                         <figure class="side-icon calc-icon"></figure><a href="" class="side-link calc">Calculadora</a>
-                    </li>
+                    </li-->
                     <li class="profile-item grid-item-profile">
                         <a href="menu/" class="link-menu-non">
                             <span class="profile-image circle-avatar">
@@ -336,22 +336,22 @@
 
                         <div class="side-right-overlay">
                             <div class="title-center">
-                                    <h2 class="amount-title-overlay">
-                                        $40,000 MXN
+                                    <h2 class="amount-title-overlay"  >
+                                        <div id="montoModal"></div>
                                     </h2>
                                     <div class="title-info-overlay">
-                                        <h3 class="title-sub-heading-overlay">
+                                        <h3 class="title-sub-heading-overlay" id="interesModal" >
                                             Interes: 1%
                                         </h3>
-                                        <h3 class="title-sub-heading-overlay">
+                                        <h3 class="title-sub-heading-overlay" id="semanasModal">
                                             Plazo a pagar: 128 semanas
                                         </h3>
-                                        <h3 class="title-sub-heading-overlay">
+                                        <h3 class="title-sub-heading-overlay" id="inicioModal" >
                                             Inicio de pago: 4 semanas
                                         </h3>
                                     </div>
                                     
-                                    <div class="cta-button-div">
+                                    <div class="cta-button-div" id="buttonSolicitar" >
                                         <a class="cta-button-blue-overlay cta-global-larger-vis" id="solicitarCreditoPc" onclick="">Solicitar</a>
                                         <a class="cta-button-blue-overlay cta-global-mobile-vis"  id="solicitarCreditoPc" onclick="">Solicitar</a>
                                     </div>
@@ -361,7 +361,7 @@
                                             <h3 class="title-sub-side-overlay">
                                                     Monto a pagar cada semana:
                                             </h3>
-                                            <h3 class="amount-side">
+                                            <h3 class="amount-side" id="montoSemanalModal" >
                                                     $ 800 MXN
                                             </h3>
                                         </div>
@@ -376,7 +376,7 @@
                 </div>
             </div>        
         </div>
-
+        <script src="js/jquery-3.5.1.js" ></script>
         <script src="v/home/scripts/popup.js"></script>
 
         <div class="alert-credit-larger" id="alertLarge">
@@ -432,9 +432,25 @@
         </div>
 
         <script>
-            function openAlarg() {
-              document.getElementById("alertLarge").style.height = "100%";
-              document.getElementById("preloaderAlert").style.overflow = "visible";
+            function openAlarg(id) {
+                alert(id);
+                $(document).ready(function() {
+                   $.ajax({
+                      url: "http://localhost:4000/users/hasFiscal",
+                      headers: {
+                        Authorization: "Bearer " + localStorage.getItem("token"),
+                      },
+                    }).done(function (data) {
+                        if (data) {
+                            document.getElementById("alertLarge").style.height = "100%";
+                            document.getElementById("preloaderAlert").style.overflow = "visible";
+                        } else {
+                          openReg();
+                        }
+                      }).fail(function () {});
+                    }); 
+                });
+              
             }
             
             function closeAlarg() {
@@ -964,7 +980,7 @@
             </div>    
         </div>
 
-       <script src="js/jquery-3.5.1.js" ></script>
+       
         <script src="js/main.js" ></script>
     </body>
 </html>    
