@@ -9,20 +9,51 @@ $(document).ready(function() {
 			headers: {
 				"Authorization": "Bearer "+localStorage.getItem('token')
 			}
-		})
-		.done(function(data) {
-			if(data){
-				openAlarg();
-				
-				console.log(data);
-			}else{
-				console.log(data);
-				openOver();
+		}).done(function(data) {
+				if(data){
+					openAlarg();
+					
+					console.log(data);
+				}else{
+					console.log(data);
+					openReg();
+				}
+		}).fail(function() {
+				console.log("error");
+		});			
+	});
+
+	$("#sendFiscalData").click(function(event) {
+		$.ajax({
+			url: 'http://localhost:4000/fiscal/createFiscal',
+			type: 'POST',
+			headers: {
+				"Authorization": "Bearer "+localStorage.getItem('token')
+			},
+			data: {
+				'rfc': $("#rfc").val(),
+				'curp': $("#curp").val(),
+				'address': $("#address").val(),
+				'postal': $("#cp").val(),
+				'social': $("#social").val(),
+				'email': $("#email").val(),
+				'phone': $("#phone").val(),
+				'occupation': $("#occupation").val(),
+				'monthlyIncome': $("#monthlyIncome").val(),
+				'workplace': $("#workplace").val(),
+				'academic': $("#academic option:selected" ).text(),
+				'reference': $("#reference").val(),
+				'beneficiary': $("#beneficiary").val()
 			}
+			
+		})
+		.done(function() {
+			console.log("success");
 		})
 		.fail(function() {
 			console.log("error");
 		});
 		
 	});
+
 });
