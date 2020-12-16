@@ -4,8 +4,9 @@ $(document).ready(function () {
   })
     .done(function (data) {
       console.log(data);
+      var added ="";
       data.map((actual) => {
-        var added =
+        added =added+
           '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
           actual.monto +
           ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
@@ -25,8 +26,9 @@ $(document).ready(function () {
           "','" +
           actual.inicioPago +
           "')\">Ver más</a></div></div>";
-        $("#dynamicCards").append(added);
+        
       });
+      $("#dynamicCards").html(added);
       var swiper = new Swiper(".swiper-container", {
         effect: "coverflow",
         grabCursor: true,
@@ -54,7 +56,198 @@ $(document).ready(function () {
     }).fail(function() {
     	console.log("error");
     });
-    
+
+    $("#searchInput").keyup(function(event) {
+    	if($("#searchInput").val().length!=0){
+    		$.ajax({
+    			url: 'http://localhost:4000/credits/filter/'+$("#searchInput").val(),
+    		})
+    		.done(function(data) {
+    			var added ="";
+    			data.map((actual) => {
+			         added =added+
+			          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+			          actual.monto +
+			          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+			          actual.interes +
+			          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+			          actual.plazo +
+			          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+			          actual.inicioPago +
+			          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+			          actual._id +
+			          "','" +
+			          actual.monto +
+			          "','" +
+			          actual.interes +
+			          "','" +
+			          actual.plazo +
+			          "','" +
+			          actual.inicioPago +
+			          "')\">Ver más</a></div></div>";
+			        
+			      });
+    				$("#dynamicCards").html(added);
+			      var swiper = new Swiper(".swiper-container", {
+			        effect: "coverflow",
+			        grabCursor: true,
+			        centeredSlides: true,
+			        slidesPerView: "auto",
+			        coverflowEffect: {
+			          rotate: 50,
+			          stretch: 0,
+			          depth: 100,
+			          modifier: 1,
+			          slideShadows: true,
+			        },
+			        pagination: { el: ".swiper-pagination" },
+			      });
+    		})
+    		.fail(function() {
+    			$.ajax({
+    url: "http://localhost:4000/credits/list",
+  })
+    .done(function (data) {
+      console.log(data);
+      var added ="";
+      data.map((actual) => {
+        added =added+
+          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+          actual.monto +
+          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+          actual.interes +
+          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+          actual.plazo +
+          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+          actual.inicioPago +
+          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+          actual._id +
+          "','" +
+          actual.monto +
+          "','" +
+          actual.interes +
+          "','" +
+          actual.plazo +
+          "','" +
+          actual.inicioPago +
+          "')\">Ver más</a></div></div>";
+        
+      });
+      $("#dynamicCards").html(added);
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: { el: ".swiper-pagination" },
+      });
+    })
+    .fail(function () {});
+    		})
+    		.error(function() {
+    			$.ajax({
+    url: "http://localhost:4000/credits/list",
+  })
+    .done(function (data) {
+      console.log(data);
+      var added ="";
+      data.map((actual) => {
+        added =added+
+          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+          actual.monto +
+          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+          actual.interes +
+          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+          actual.plazo +
+          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+          actual.inicioPago +
+          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+          actual._id +
+          "','" +
+          actual.monto +
+          "','" +
+          actual.interes +
+          "','" +
+          actual.plazo +
+          "','" +
+          actual.inicioPago +
+          "')\">Ver más</a></div></div>";
+        
+      });
+      $("#dynamicCards").htm(added);
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: { el: ".swiper-pagination" },
+      });
+    })
+    .fail(function () {});
+    		});;	
+    	}else{
+    		$.ajax({
+			    url: "http://localhost:4000/credits/list",
+			  })
+			    .done(function (data) {
+			      console.log(data);
+			      var added ="";
+			      data.map((actual) => {
+			        var added = added+
+			          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+			          actual.monto +
+			          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+			          actual.interes +
+			          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+			          actual.plazo +
+			          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+			          actual.inicioPago +
+			          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+			          actual._id +
+			          "','" +
+			          actual.monto +
+			          "','" +
+			          actual.interes +
+			          "','" +
+			          actual.plazo +
+			          "','" +
+			          actual.inicioPago +
+			          "')\">Ver más</a></div></div>";
+			        
+			      });
+			      $("#dynamicCards").html(added);
+			      var swiper = new Swiper(".swiper-container", {
+			        effect: "coverflow",
+			        grabCursor: true,
+			        centeredSlides: true,
+			        slidesPerView: "auto",
+			        coverflowEffect: {
+			          rotate: 50,
+			          stretch: 0,
+			          depth: 100,
+			          modifier: 1,
+			          slideShadows: true,
+			        },
+			        pagination: { el: ".swiper-pagination" },
+			      });
+			    })
+			    .fail(function () {});
+    	}
+    });
 
 
   $("#solicitarCreditoPc").click(function (event) {
