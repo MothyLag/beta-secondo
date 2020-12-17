@@ -1,29 +1,29 @@
 $(document).ready(function () {
+  getSliders();
 
-	getSliders();
-
-    $.ajax({
-    	url: 'http://localhost:4000/users/getInfo',
-    	headers: {
-       		Authorization: "Bearer " + localStorage.getItem("token"),
-      	},
-    }).done(function(data) {
-    	$("#nameRequest").html(data.name+" "+data.lastName);
-    }).fail(function() {
-    	console.log("error");
+  $.ajax({
+    url: "https://credit-back.herokuapp.com/users/getInfo",
+    headers: {
+      Authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  })
+    .done(function (data) {
+      $("#nameRequest").html(data.name + " " + data.lastName);
+    })
+    .fail(function () {
+      console.log("error");
     });
 
-    $("#searchInput").keyup(function(event) {
-    	getSliders();
-    });
-
+  $("#searchInput").keyup(function (event) {
+    getSliders();
+  });
 
   $("#solicitarCreditoPc").click(function (event) {
     //openAlarg();
     //localStorage.setItem("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZDkzZGQ3YTk1NGMzMGVkNWRjNjBkNyIsImlhdCI6MTYwODA3MjY2M30.waCYt33YBVvWqDuqJmnf_0jGb1ijgafeJbg0_Kh_dK0");
     //console.log(localStorage.getItem("token"));
     $.ajax({
-      url: "http://localhost:4000/users/hasFiscal",
+      url: "https://credit-back.herokuapp.com/users/hasFiscal",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -58,7 +58,7 @@ $(document).ready(function () {
       alert("Algunos campos pueden estar incorrectos, por favor, verifíquelos");
     } else {
       $.ajax({
-        url: "http://localhost:4000/fiscal/createFiscal",
+        url: "https://credit-back.herokuapp.com/fiscal/createFiscal",
         type: "POST",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -98,56 +98,55 @@ $(document).ready(function () {
   });
 });
 
-function getSliders(){
-	$.ajax({
-		url: 'http://localhost:4000/credits/filter/'+$("#searchInput").val(),
-	})
-	.done(function(data) {
-		var added ='<div class="swiper-container"><div class="swiper-wrapper" id="dynamicCards" >';
-		data.map((actual) => {
-	         added =added+
-	          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
-	          actual.monto +
-	          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
-	          actual.interes +
-	          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
-	          actual.plazo +
-	          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
-	          actual.inicioPago +
-	          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
-	          actual._id +
-	          "','" +
-	          actual.monto +
-	          "','" +
-	          actual.interes +
-	          "','" +
-	          actual.plazo +
-	          "','" +
-	          actual.inicioPago +
-	          "')\">Ver más</a></div></div>";
-	        
-	      });
-		added =added+'</div></div>';
-			$("#genSwipper").html(added);
-			
-				var swiper = new Swiper(".swiper-container", {
-			        effect: "coverflow",
-			        grabCursor: true,
-			        centeredSlides: true,
-			        slidesPerView: "auto",
-			        coverflowEffect: {
-			          rotate: 50,
-			          stretch: 0,
-			          depth: 100,
-			          modifier: 1,
-			          slideShadows: true,
-			        },
-			        pagination: { el: ".swiper-pagination" },
-		      });
-			
-	      	
-	})
-	.fail(function() {
+function getSliders() {
+  $.ajax({
+    url:
+      "https://credit-back.herokuapp.com/credits/filter/" +
+      $("#searchInput").val(),
+  })
+    .done(function (data) {
+      var added =
+        '<div class="swiper-container"><div class="swiper-wrapper" id="dynamicCards" >';
+      data.map((actual) => {
+        added =
+          added +
+          '<div class="swiper-slide"><div class="ac-title-card"><div class="ac-sun-spec"><figure class="sun-icon"></figure></div><h2 class="ac-amount-title">$' +
+          actual.monto +
+          ' MXN</h2></div><div class="ac-title-specs"><h3 class="ac-title-sub-heading">Interes: ' +
+          actual.interes +
+          '%</h3><h3 class="ac-title-sub-heading">Plazo a pagar: ' +
+          actual.plazo +
+          ' semanas</h3><h3 class="ac-title-sub-heading">Inicio de pago: ' +
+          actual.inicioPago +
+          ' semanas</h3></div><div class="ac-person-spec"><h2 class="ac-person-name"></h2></div><div class="ac-cta"><a class="cta-link-card" onclick="openCredit(\'' +
+          actual._id +
+          "','" +
+          actual.monto +
+          "','" +
+          actual.interes +
+          "','" +
+          actual.plazo +
+          "','" +
+          actual.inicioPago +
+          "')\">Ver más</a></div></div>";
+      });
+      added = added + "</div></div>";
+      $("#genSwipper").html(added);
 
-	});
+      var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: { el: ".swiper-pagination" },
+      });
+    })
+    .fail(function () {});
 }
